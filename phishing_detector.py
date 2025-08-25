@@ -7,8 +7,27 @@ from colorama import Fore, Style, init
 init(autoreset=True)
 
 # List of suspicious keywords
-KEYWORDS = ["urgent", "verify", "account", "click here", "limited time",
-            "password reset", "confirm", "bank", "lottery"]
+KEYWORDS = ["urgent", "verify","click here", "limited time",
+            "password reset", "confirm", "lottery"]# Suspicious keyword phrases instead of single words
+SUSPICIOUS_PHRASES = [
+    "verify your account",
+    "reset your password",
+    "click here to login",
+    "urgent action required",
+    "update billing information",
+    "confirm your identity",
+    "login immediately",
+    "unusual activity detected"
+]
+
+def check_suspicious_keywords(email_text):
+    found_phrases = []
+    lowered = email_text.lower()
+    for phrase in SUSPICIOUS_PHRASES:
+        if phrase in lowered:
+            found_phrases.append(phrase)
+    return found_phrases
+
 def banner():
     print(Fore.CYAN + "="*50)
     print(Fore.MAGENTA + "   📧  PHISHING EMAIL DETECTOR  🚨")
