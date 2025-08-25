@@ -30,7 +30,7 @@ Phishing-Email-Detector/
 
 ## ⚙️ Installation
 ```bash
-git clone https://github.com/MurtazaSukhsar/Phishing-Email-Detector.git
+git clone https://github.com/MurtazaSukhsar/project-1-Phishing-Email-Detector.git
 cd Phishing-Email-Detector
 python3 -m venv myenv
 source myenv/bin/activate
@@ -106,9 +106,6 @@ python phishing_detector.py samples/phishing_email.txt
 ---
 
 ## 🤖 About AI Assistance
-This project was built with the help of **AI (ChatGPT)**, which assisted in:
-- Code generation & debugging  
-- Improving CLI design with colors & banners  
-- Documentation & structuring for GitHub  
+This project was built with the help of **AI**
 
 Using AI boosted productivity and allowed me to focus more on **cybersecurity concepts** rather than just syntax.
